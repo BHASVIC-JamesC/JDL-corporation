@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="Page-1" id="GKIm5zr4rOBTvI0o6N9u">
-    <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;start&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="20" width="120" height="80" as="geometry" />
+          <mxGeometry x="351" y="-50" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="iYpi32ViGrSebuN5KeIt-2" target="iYpi32ViGrSebuN5KeIt-4" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -22,7 +22,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-2" value="do you wish to check in,&lt;div&gt;check out&lt;/div&gt;&lt;div&gt;&amp;nbsp;or book dinner?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="334" y="180" width="160" height="150" as="geometry" />
+          <mxGeometry x="334" y="225" width="160" height="150" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iYpi32ViGrSebuN5KeIt-4" target="iYpi32ViGrSebuN5KeIt-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -34,12 +34,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-5" value="dinner" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="340" width="120" height="60" as="geometry" />
+          <mxGeometry x="354" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-6" value="checkOut" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="170" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="heKLa-xPnCjZXeWw5VQV-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iYpi32ViGrSebuN5KeIt-10" target="iYpi32ViGrSebuN5KeIt-16">
+        <mxCell id="heKLa-xPnCjZXeWw5VQV-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iYpi32ViGrSebuN5KeIt-10" target="iYpi32ViGrSebuN5KeIt-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-10" value="personalDetails" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
@@ -60,13 +60,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-18" value="eligible" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="353" y="430" width="120" height="60" as="geometry" />
+          <mxGeometry x="354" y="470" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iYpi32ViGrSebuN5KeIt-20" target="iYpi32ViGrSebuN5KeIt-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-20" value="findTable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="353" y="520" width="120" height="60" as="geometry" />
+          <mxGeometry x="354" y="585" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="iYpi32ViGrSebuN5KeIt-23" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -74,7 +74,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-23" value="quitProgram" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="610" width="120" height="60" as="geometry" />
+          <mxGeometry x="354" y="670" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iYpi32ViGrSebuN5KeIt-27" value="billCalc" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="270" width="120" height="60" as="geometry" />
@@ -96,8 +96,11 @@
         <mxCell id="Kp7KoYTgCoLYN2gOnkEI-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.433;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="iYpi32ViGrSebuN5KeIt-27" target="iYpi32ViGrSebuN5KeIt-30" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="heKLa-xPnCjZXeWw5VQV-1" value="creates a 2D array for each users data:&lt;div&gt;data[12][7]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="351" y="110" width="120" height="60" as="geometry" />
+        <mxCell id="heKLa-xPnCjZXeWw5VQV-1" value="creates a 2D array for each users data:&lt;div&gt;data[12][7]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="351" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kZ-SWJw0bnluUXhNLTbp-2" value="create a 2D array called tables[3][4]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="140" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
