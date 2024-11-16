@@ -1,16 +1,4 @@
 # ninja log v6
-3	378	7531175487333072	build.ninja	d797f7fedfd7382
-2	137	7531183892071710	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-138	338	7531183893432619	JDL_corporation.exe	8b6e2342f070bb0d
-6	185	7531186267717750	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-186	355	7531186269514664	JDL_corporation.exe	8b6e2342f070bb0d
-5	166	7531204205132572	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-167	337	7531204206734569	JDL_corporation.exe	8b6e2342f070bb0d
-4	161	7531206213743598	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-162	323	7531206215313199	JDL_corporation.exe	8b6e2342f070bb0d
-6	265	7531209519791537	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-266	610	7531209522384257	JDL_corporation.exe	8b6e2342f070bb0d
-5	135	7531211089433952	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
-136	274	7531211090746190	JDL_corporation.exe	8b6e2342f070bb0d
+3	378	7535047044781004	build.ninja	d797f7fedfd7382
 4	136	7531211381259400	CMakeFiles/JDL_corporation.dir/dinner.c.obj	6841b8b411ece358
 137	303	7531211382585961	JDL_corporation.exe	8b6e2342f070bb0d
