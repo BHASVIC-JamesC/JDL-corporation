@@ -2,8 +2,8 @@
 #include <string.h>
 
 void dinner(char tables[2][3][12], char data[7][12][20], char userDetails[12]);
-int eligible(char data[7][12][20], char bookingIDdinner[12]);
-void findTable(char tables[2][3][12], char data[7][12][20], char bookingIDdinner[12], char userDetails[12]);
+int eligible(char data[7][12][20], char bookingIDdinner[20]);
+void findTable(char tables[2][3][12], char data[7][12][20], char bookingIDdinner[20], char userDetails[12]);
 void quitProgram(char userDetails[12]);
 
 int main(void) {
@@ -31,7 +31,7 @@ int main(void) {
 }
 
 void dinner(char tables[2][3][12], char data[7][12][20], char userDetails[12]) {
-    char bookingIDdinner[12];
+    char bookingIDdinner[20];
     printf("\nHello! Welcome to dinner.\n");
 
     if (eligible(data, bookingIDdinner) == 1) {
@@ -41,10 +41,10 @@ void dinner(char tables[2][3][12], char data[7][12][20], char userDetails[12]) {
     }
 }
 
-int eligible(char data[7][12][20], char bookingIDdinner[12]) {
+int eligible(char data[7][12][20], char bookingIDdinner[20]) {
     printf("\nwhat's your booking ID?: ");
-    fgets(bookingIDdinner, 12, stdin);
-    bookingIDdinner[strcspn(bookingIDdinner, "\n")] = 0;  // Remove newline
+    scanf("%s",bookingIDdinner);
+
 
     for (int i = 0; i < 7; i++) {
         if (strcmp(data[i][10], bookingIDdinner) == 0) {
@@ -56,7 +56,7 @@ int eligible(char data[7][12][20], char bookingIDdinner[12]) {
     return 0;
 }
 
-void findTable(char tables[2][3][12], char data[7][12][20], char bookingIDdinner[12], char userDetails[12]) {
+void findTable(char tables[2][3][12], char data[7][12][20], char bookingIDdinner[20], char userDetails[12]) {
     char tableChoice[10];
     int available = 0;
 
@@ -93,8 +93,8 @@ void findTable(char tables[2][3][12], char data[7][12][20], char bookingIDdinner
     }
 
     printf("\nWhich table and time would you like to book?\nFor example, type: Naboo7 for table Naboo at 7pm\nEnter: ");
-    fgets(tableChoice, 10, stdin);
-    tableChoice[strcspn(tableChoice, "\n")] = 0;  // Remove newline
+    scanf("%s",tableChoice);
+
 
     // Process table choice
     if (strcmp(tableChoice, "Endor7") == 0 && strcmp(tables[0][0], "") == 0) {
