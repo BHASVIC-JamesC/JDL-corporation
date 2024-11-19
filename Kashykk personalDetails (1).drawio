@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="Page-1" id="ZcC98A4X1nwxih7wpPkZ">
     <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -35,70 +35,70 @@
         <mxCell id="NovJ2BirQ6Es54YBYU_m-20" value="children price and adult price different for checkout" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="70" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-1" target="VvvIT2NDCBzjUYfmGgko-2">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-1" target="VvvIT2NDCBzjUYfmGgko-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-1" value="input: age" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-1" value="input: age" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="365" y="470" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-2" target="VvvIT2NDCBzjUYfmGgko-4">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-2" target="VvvIT2NDCBzjUYfmGgko-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-2" value="kids, adults (this is how many guests&amp;nbsp;&lt;div&gt;are staying, kids which are 16&amp;nbsp;&lt;/div&gt;&lt;div&gt;and under)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-2" value="kids, adults (this is how many guests&amp;nbsp;&lt;div&gt;are staying, kids which are 16&amp;nbsp;&lt;/div&gt;&lt;div&gt;and under)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="294" y="570" width="263" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-4" target="VvvIT2NDCBzjUYfmGgko-6">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-4" target="VvvIT2NDCBzjUYfmGgko-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-4" value="input:&amp;nbsp;&lt;div&gt;board-&lt;br&gt;&lt;div&gt;FB, HB or bed and&lt;/div&gt;&lt;div&gt;breakfast&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-4" value="input:&amp;nbsp;&lt;div&gt;board-&lt;br&gt;&lt;div&gt;FB, HB or bed and&lt;/div&gt;&lt;div&gt;breakfast&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="366" y="700" width="144" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-6" target="VvvIT2NDCBzjUYfmGgko-8">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-6" target="VvvIT2NDCBzjUYfmGgko-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-6" value="days ( how long they stay)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-6" value="days ( how long they stay)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="378" y="800" width="152" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-8" target="VvvIT2NDCBzjUYfmGgko-10">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-8" target="VvvIT2NDCBzjUYfmGgko-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-8" value="newspaper-&lt;div&gt;do they want a&lt;/div&gt;&lt;div&gt;&amp;nbsp;newspaper or not&lt;/div&gt;&lt;div&gt;(Y or N is stored)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-8" value="newspaper-&lt;div&gt;do they want a&lt;/div&gt;&lt;div&gt;&amp;nbsp;newspaper or not&lt;/div&gt;&lt;div&gt;(Y or N is stored)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="379" y="900" width="192" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-10" target="VvvIT2NDCBzjUYfmGgko-18">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-10" target="VvvIT2NDCBzjUYfmGgko-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-10" value="output: the rooms that are available and the corresponding prices" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-10" value="output: the rooms that are available and the corresponding prices" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="1040" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-12" target="VvvIT2NDCBzjUYfmGgko-17">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-12" target="VvvIT2NDCBzjUYfmGgko-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-12" value="output:BookingID" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-12" value="output:BookingID" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="450" y="1370" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-13" target="VvvIT2NDCBzjUYfmGgko-12">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-13" target="VvvIT2NDCBzjUYfmGgko-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-13" value="bookingID - lastName34343(a random number)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-13" value="bookingID - lastName34343(a random number)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="440" y="1280" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-16" value="create an array:&lt;div&gt;userDetails[12]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-16" value="create an array:&lt;div&gt;userDetails[12]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-17" target="VvvIT2NDCBzjUYfmGgko-22">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-17" target="VvvIT2NDCBzjUYfmGgko-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-17" value="append the following in the following order to the array userDetails[12]:&lt;div&gt;firstName&lt;/div&gt;&lt;div&gt;lastName&lt;/div&gt;&lt;div&gt;D.O.B&lt;/div&gt;&lt;div&gt;age&lt;/div&gt;&lt;div&gt;kids&lt;/div&gt;&lt;div&gt;adults&lt;/div&gt;&lt;div&gt;board&lt;/div&gt;&lt;div&gt;days&lt;/div&gt;&lt;div&gt;newspaper&lt;/div&gt;&lt;div&gt;room&lt;/div&gt;&lt;div&gt;BookingID&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-17" value="append the following in the following order to the array userDetails[12]:&lt;div&gt;firstName&lt;/div&gt;&lt;div&gt;lastName&lt;/div&gt;&lt;div&gt;age&lt;/div&gt;&lt;div&gt;kids&lt;/div&gt;&lt;div&gt;adults&lt;/div&gt;&lt;div&gt;board&lt;/div&gt;&lt;div&gt;days&lt;/div&gt;&lt;div&gt;newspaper&lt;/div&gt;&lt;div&gt;room&lt;/div&gt;&lt;div&gt;BookingID&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="240" y="1490" width="360" height="229" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VvvIT2NDCBzjUYfmGgko-18" target="VvvIT2NDCBzjUYfmGgko-13">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VvvIT2NDCBzjUYfmGgko-18" target="VvvIT2NDCBzjUYfmGgko-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-18" value="room ( what room they want)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-18" value="room ( what room they want)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="425" y="1170" width="180" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="VvvIT2NDCBzjUYfmGgko-22" value="append userDetails to the 2D&lt;div&gt;array created at the start of&amp;nbsp;&lt;/div&gt;&lt;div&gt;main&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VvvIT2NDCBzjUYfmGgko-22" value="append userDetails to the 2D&lt;div&gt;array created at the start of&amp;nbsp;&lt;/div&gt;&lt;div&gt;main&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="1760" width="180" height="100" as="geometry" />
         </mxCell>
       </root>
