@@ -4,4 +4,4 @@ project(JDL_corporation C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(JDL_corporation
-        dinner.c)
+        checkIn.c)
