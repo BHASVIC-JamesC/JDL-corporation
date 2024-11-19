@@ -2,13 +2,12 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
-int checkIn(g);
+int checkIn();
 
 char data[7][12][24];
 int guest = 0;
 char   firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20], temp2[20];
-int guests, kids[4],adults[4], days[4], day, month, year, daysa, age, room, valid = 0,  random;
-char DOB[10];
+int guests, kids,adults, days, day, month, year, daysa, age, room, valid = 0,  random;
 int main(void){
     int personalDetails;
     char userChoice;
@@ -65,13 +64,13 @@ int checkIn() {
         printf("How many children will be staying with you:");
         fflush(stdin);
         scanf("%d", &kids);
-        if (kids[guest] >= guests) {
+        if (kids >= guests) {
             printf("Enter a valid amount of children\n");
             guests = 2;
         }
-    }while (kids[guest] > guests);
+    }while (kids > guests);
     do {
-        adults[4] = guests-kids[guest];
+        adults = guests-kids;
         printf("What board type do you want to book:\nFull Board(FB)\tHalf Board(HB)\tBed and Breakfast(BB):");
         fflush(stdin);
         scanf("%s",board);
@@ -83,11 +82,11 @@ int checkIn() {
     do {
         printf("\nHow many days will you be staying with us:");
         fflush(stdin);
-        scanf("%d", &days[guest]);
-        if(days[guest] < 0) {
+        scanf("%d", &days);
+        if(days < 0) {
             printf("You entered an invalid day. Please try again.\n");
         }
-    }while(days[guest] < 0);
+    }while(days < 0);
     do {
         printf("Do you want a daily newspaper? (Y) or (N):");
         fflush(stdin);

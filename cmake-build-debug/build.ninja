@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Users/james/Downloads/comp$ sci$ work/JDL-corporation/
 
 build cmake_object_order_depends_target_JDL_corporation: phony || .
 
-build CMakeFiles/JDL_corporation.dir/checkIn.c.obj: C_COMPILER__JDL_corporation_unscanned_Debug C$:/Users/james/Downloads/comp$ sci$ work/JDL-corporation/checkIn.c || cmake_object_order_depends_target_JDL_corporation
-  DEP_FILE = CMakeFiles\JDL_corporation.dir\checkIn.c.obj.d
+build CMakeFiles/JDL_corporation.dir/main.c.obj: C_COMPILER__JDL_corporation_unscanned_Debug C$:/Users/james/Downloads/comp$ sci$ work/JDL-corporation/main.c || cmake_object_order_depends_target_JDL_corporation
+  DEP_FILE = CMakeFiles\JDL_corporation.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\JDL_corporation.dir
   OBJECT_FILE_DIR = CMakeFiles\JDL_corporation.dir
@@ -63,7 +63,7 @@ build CMakeFiles/JDL_corporation.dir/checkIn.c.obj: C_COMPILER__JDL_corporation_
 #############################################
 # Link the executable JDL_corporation.exe
 
-build JDL_corporation.exe: C_EXECUTABLE_LINKER__JDL_corporation_Debug CMakeFiles/JDL_corporation.dir/checkIn.c.obj
+build JDL_corporation.exe: C_EXECUTABLE_LINKER__JDL_corporation_Debug CMakeFiles/JDL_corporation.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\JDL_corporation.dir
