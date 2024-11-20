@@ -13,7 +13,7 @@ int getbill(char data[7][12][20]);
 
 
 int main(void){
-    float who;
+
         //firstname surname dob age children days board guests newspaper rooms Id
     char data[7][12][20] = {
         {"james","cook","22/09/2007","16","0","2","FB","3","N","3","cook1234"},
@@ -30,23 +30,34 @@ int main(void){
     return 0;
 }
 int getbill(char data[7][12][20]) {
-    char paper = data[0][8];
+    int person = 0;
+    char who[20];
+    //gets who is checking out
+    printf("Enter your ID:");
+    scanf("%s",&who);
+    for (int i = 0;i<7;i++) {
+        if (strcmp(who,data[i][10])==0) {
+            person = i;
+        }
+    }
+    //just gets some of the data from the array and makes it a variable
+    char paper = data[person][8];
     float total_bill = 0;
     float Roomcost = 0;
-    int children = data[0][4];
-    int age = data[0][3];
+    int children = data[person][4];
+    int age = data[person][3];
     float adultboard = 0;
     float childboard = 0;
     float total_board = 0;
-    int rooms = data[0][9];
-    int days = data[0][5];
-    int adults = data[0][7] - data[0][4];
+    int rooms = data[person][9];
+    int days = data[person][5];
+    int adults = data[person][7] - data[person][4];
 
-
+    // adds 5.5 on to total if there is paper
     if (paper == 'Y'){
         total_bill = total_bill + 5.5;
     }
-
+    //checks how many rooms someone has and then gets the roomcost
     if(rooms == 1 || rooms == 2) {
         Roomcost =  rooms * 100 * days;
     }
@@ -59,38 +70,49 @@ int getbill(char data[7][12][20]) {
     else if(rooms == 6) {
         Roomcost = rooms * 50 * days;
     }
+    // gives discount if over 65
     if (age >= 65){
         Roomcost = Roomcost * 0.9;
     }
-
+    //sees what board they got then gets the childs one
     if (children >= 1){
-        if (strcmp(data[0][6], "FB") == 0){
+        if (strcmp(data[person][6], "FB") == 0){
             childboard = children * 20;
         }
-        else if(strcmp(data[0][6], "HB") == 0){
+        else if(strcmp(data[person][6], "HB") == 0){
             childboard = children * 15;
         }
-        else if(strcmp(data[0][6], "BB") == 0){
+        else if(strcmp(data[person][6], "BB") == 0){
             childboard = children * 5;
         }
-
-        childboard = childboard /2;
+    //divides by 2 as they are under 16
+    childboard = childboard /2;
     }
-    if (strcmp(data[0][6], "FB") == 0){
+    //does food cost for adults
+    if (strcmp(data[person][6], "FB") == 0){
         adultboard = adults * 20;
     }
-    else if(strcmp(data[0][6], "HB") == 0){
+    else if(strcmp(data[person][6], "HB") == 0){
         adultboard = adults * 15;
     }
-    else if(strcmp(data[0][6], "BB") == 0){
+    else if(strcmp(data[person][6], "BB") == 0){
         adultboard = adults * 5;
     }
 
-
+    //gets total food bill
     total_board = childboard + adultboard;
+    //gets total bill
     total_bill = total_bill + Roomcost + total_board;
                 //firstname surname ID childboard adultboard Roomcost Total
-    printf("\n%s %s \n%s \n%f \n%f \n%f \nTotal:%f",data[0][0],data[0][1], data[0][10], childboard, adultboard, Roomcost, total_bill);
+    printf("\n%s %s \n%s \n%f \n%f \n%f \nTotal:%f",data[person][0],data[person][1], data[person][10], childboard, adultboard, Roomcost, total_bill);
+    //removes the person from the data
+    for(int i=0;i<10;i++) {
+        strcpy(data[person][i] , data[person +1][i]);
+    }
+
+    printf("\nThank You For staying");
     return 0;
 }
+
+
 
