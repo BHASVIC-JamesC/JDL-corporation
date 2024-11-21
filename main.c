@@ -57,12 +57,14 @@ void checkIn(char userDetails[12][24]) {
     int state = 0;
     for(int x = 0; x<=6;x++) {
         if(data[x][8][0] == 0){
+            state = 0;
+            break;}
+        else {
             state = 1;
-            break;
         }
     }
     if(state == 1) {
-        printf("we are full right now,sorry!n");
+        printf("we are full right now,sorry!\n");
         return;
     }
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20];
@@ -187,6 +189,11 @@ void checkIn(char userDetails[12][24]) {
         }
     }
 
+    for(int k = 0; k<=6;k++) {
+        for(int p = 0; p<=9;p++){
+            printf("%s\n",data[k][p]);
+        }
+    }
 
     printf("Check-in complete!\n");
 }
