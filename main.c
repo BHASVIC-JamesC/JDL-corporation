@@ -1,7 +1,9 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 //check in subroutines
 void checkIn();
 
@@ -16,7 +18,7 @@ void quitProgram(char userDetails[12][24]);
 int getbill();
 
 
-char data[7][12][24];
+char data[7][12][24] = {0};
 char tables[2][3][12];
 int guest=0;
 int main(void) {
@@ -76,7 +78,10 @@ void checkIn(char userDetails[12][24]) {
         if (age < 16) {
             printf("You must be at least 16 years old to check in.\n");
         }
-    } while (age < 16);
+        if(day > 31 || day<0||month<0|| month>12) {
+            printf("please enter valid days/month/year.\n");
+        }
+    } while (age < 16 || day > 31 || month > 12|| day<0||month<0);
 
     // Guest and children validation
     do {
@@ -95,7 +100,7 @@ void checkIn(char userDetails[12][24]) {
         if (kids < 0 || kids > guests) {
             printf("Invalid number of children. Please enter between 0 and %d.\n", guests);
         }
-    } while (kids < 0 || kids > guests);
+    } while (kids < 0 || kids > guests-1);
 
     adults = guests - kids;
 
@@ -171,8 +176,9 @@ void checkIn(char userDetails[12][24]) {
 
 
     for(int k = 0; k<=6;k++) {
-        if(data[k][9]){
+        if(data[k][8][0] ==0){
             guest = k;
+            break;
         }
     }
     
