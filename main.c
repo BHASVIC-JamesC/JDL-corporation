@@ -55,7 +55,7 @@ int main(void) {
 
 void checkIn(char userDetails[12][24]) {
     int state = 0;
-    for(int x = 0; x<=6;x++) {
+    for(int x = 0; x<=5;x++) {
         if(data[x][8][0] == 0){
             state = 0;
             break;}
@@ -68,7 +68,7 @@ void checkIn(char userDetails[12][24]) {
         return;
     }
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20];
-    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random;
+    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger;
     srand(time(NULL));
 
     printf("Enter your full name:");
@@ -87,8 +87,9 @@ void checkIn(char userDetails[12][24]) {
         }
         if(day > 31 || day<0||month<0|| month>12) {
             printf("please enter valid days/month/year.\n");
+
         }
-    } while (age < 16 || day > 31 || month > 12|| day<0||month<0);
+    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 );
 
     // Guest and children validation
     do {
@@ -169,6 +170,12 @@ void checkIn(char userDetails[12][24]) {
     printf("Booking ID:%s\n", bookingID);
     // Save to `data` and `userDetails`
 
+    for(int k = 0; k<=6;k++) {
+        if(data[k][8][0] ==0){
+            guest = k;
+            break;
+        }
+    }
 
     snprintf(data[guest][0], 24, "%s", firstName);
     snprintf(data[guest][1], 24, "%s", lastName);
@@ -181,19 +188,7 @@ void checkIn(char userDetails[12][24]) {
     snprintf(data[guest][8], 24, "%d", room);
     snprintf(data[guest][9], 24, "%s", bookingID);
 
-
-    for(int k = 0; k<=6;k++) {
-        if(data[k][8][0] ==0){
-            guest = k;
-            break;
-        }
-    }
-
-    for(int k = 0; k<=6;k++) {
-        for(int p = 0; p<=9;p++){
-            printf("%s\n",data[k][p]);
-        }
-    }
+    
 
     printf("Check-in complete!\n");
 }
