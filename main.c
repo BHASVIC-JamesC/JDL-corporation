@@ -89,7 +89,7 @@ void checkIn(char userDetails[12][24]) {
             printf("please enter valid days/month/year.\n");
 
         }
-    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 );
+    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 || day ==0 || month ==0 || year ==0);
 
     // Guest and children validation
     do {
@@ -99,18 +99,18 @@ void checkIn(char userDetails[12][24]) {
         if (guests < 1 || guests > 4) {
             printf("Invalid number of guests. Please enter between 1 and 4.\n");
         }
-    } while (guests < 1 || guests > 4);
+    } while (guests < 1 || guests > 4 || guests ==0);
 
     do {
-        printf("\nHow many children will be staying with you?:");
+        printf("\nHow many adults will be staying with you?:");
         fflush(stdin);
-        scanf("%d", &kids);
-        if (kids < 0 || kids > guests) {
-            printf("Invalid number of children. Please enter between 0 and %d.\n", guests);
+        scanf("%d", &adults);
+        if (adults < 0 || adults == 0) {
+            printf("Invalid number of adults. Please enter between 0 and %d.\n", guests);
         }
-    } while (kids < 0 || kids > guests-1);
+    } while (adults < 0 || adults == 0 );
 
-    adults = guests - kids;
+    kids = guests - adults;
 
     // Board type selection
     do {
@@ -188,7 +188,7 @@ void checkIn(char userDetails[12][24]) {
     snprintf(data[guest][8], 24, "%d", room);
     snprintf(data[guest][9], 24, "%s", bookingID);
 
-    
+
 
     printf("Check-in complete!\n");
 }
