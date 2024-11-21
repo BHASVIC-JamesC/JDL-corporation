@@ -27,7 +27,7 @@ int main(void) {
     printf("Welcome to Kashyyk Hotel\n");
     while (run == 1) {
         char userChoice;
-        printf("Would you like to check in(a), Book dinner(b) or check out(c): ");
+        printf("Would you like to check in(a), Book dinner(b) or check out(c):");
         fflush(stdin);
         scanf(" %c", &userChoice);
 
@@ -170,10 +170,17 @@ void checkIn(char userDetails[12][24]) {
     snprintf(data[guest][9], 24, "%s", bookingID);
 
 
-
-    guest++;
+    for(int k = 0; k<=6;k++) {
+        if(data[k][9]){
+            guest = k;
+        }
+    }
     
-
+    for(int j =0;j<=6;j++) {
+        for(int i = 0;i<=9;i++) {
+            printf("%s\n",data[j][i]);
+        }
+    }
 
 
     printf("Check-in complete!\n");
@@ -189,7 +196,7 @@ void dinner(char userDetails[12][24]) {
 
 
 
-    printf("\nWhat's your booking ID?: ");
+    printf("\nWhat's your booking ID?:");
     fflush(stdin);
     fgets(bookingIDdinner, sizeof(bookingIDdinner), stdin);
     bookingIDdinner[strcspn(bookingIDdinner, "\n")] = '\0'; // Remove trailing newline
