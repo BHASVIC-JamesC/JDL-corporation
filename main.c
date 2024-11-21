@@ -54,12 +54,17 @@ int main(void) {
 
 
 void checkIn(char userDetails[12][24]) {
-
-    if (guest >= 7) {
-        printf("No more guests can be accommodated.\n");
+    int state = 0;
+    for(int x = 0; x<=6;x++) {
+        if(data[x][8][0] == 0){
+            state = 1;
+            break;
+        }
+    }
+    if(state == 1) {
+        printf("we are full right now,sorry!n");
         return;
     }
-
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20];
     int day, month, year, age,kids,guests, adults, days, room, valid = 0, random;
     srand(time(NULL));
@@ -179,12 +184,6 @@ void checkIn(char userDetails[12][24]) {
         if(data[k][8][0] ==0){
             guest = k;
             break;
-        }
-    }
-    
-    for(int j =0;j<=6;j++) {
-        for(int i = 0;i<=9;i++) {
-            printf("%s\n",data[j][i]);
         }
     }
 
