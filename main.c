@@ -71,9 +71,12 @@ void checkIn(char userDetails[12][24]) {
     int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3;
     srand(time(NULL));
 
-    printf("Enter your full name (firstname surname) :");
+    printf("Enter your first name:");
     fflush(stdin);
-    scanf("%s %s", firstName, lastName);
+    scanf("%s",firstName);
+    printf("\nEnter your surname:");
+    fflush(stdin);
+    scanf("%s",lastName);
 
     // Date of birth and age validation
     do {
