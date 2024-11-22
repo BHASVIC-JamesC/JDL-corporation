@@ -28,12 +28,15 @@ int main(void) {
 
     printf("Welcome to Kashyyk Hotel\n");
     while (run == 1) {
-        char userChoice;
+        char userChoice[5];
         printf("Would you like to check in(a), Book dinner(b) or check out(c):");
         fflush(stdin);
-        scanf(" %c", &userChoice);
-
-        switch (userChoice) {
+        scanf(" %s", &userChoice);
+        int length = strlen(userChoice);
+        if(length > 1) {
+            userChoice[0] = 'd';
+        }
+        switch (userChoice[0]) {
             case 'a':
                 checkIn(data, userDetails);
             break;
