@@ -71,16 +71,32 @@ void checkIn(char userDetails[12][24]) {
         return;
     }
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
-    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3;
+    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid;
     srand(time(NULL));
+    do {
+        nameValid = 0;
+        printf("Enter your first name:");
+        fflush(stdin);
+        scanf("%s",firstName);
+        printf("\nEnter your surname:");
+        fflush(stdin);
+        scanf("%s",lastName);
+        for(int letter = 0;letter<strlen(firstName);letter++){
+            if(isdigit(firstName[letter])) {
+                nameValid = 1;
+            }
+        }
+        for(int letter = 0;letter<strlen(lastName);letter++){
+            if(isdigit(lastName[letter])) {
+                nameValid = 1;
+            }
+        }
+        if(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1) {
+            printf("\ninvalid names entered. Do better.\n");
+        }
 
-    printf("Enter your first name:");
-    fflush(stdin);
-    scanf("%s",firstName);
-    printf("\nEnter your surname:");
-    fflush(stdin);
-    scanf("%s",lastName);
-
+    }
+    while(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1);
     // Date of birth and age validation
     do {
         printf("What is your \ndate of birth?Enter day,month,and year(dd/mm/yy):");
