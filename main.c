@@ -67,17 +67,17 @@ void checkIn(char userDetails[12][24]) {
         printf("we are full right now,sorry!\n");
         return;
     }
-    char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20];
-    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger;
+    char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
+    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3;
     srand(time(NULL));
 
-    printf("Enter your full name:");
+    printf("Enter your full name (firstname surname) :");
     fflush(stdin);
     scanf("%s %s", firstName, lastName);
 
     // Date of birth and age validation
     do {
-        printf("What is your date of birth?Enter day,month,and year(dd/mm/yy):");
+        printf("What is your \ndate of birth?Enter day,month,and year(dd/mm/yy):");
         fflush(stdin);
         scanf("%d/%d/%d", &day, &month, &year);
         int currentYear = 2024;
@@ -95,20 +95,20 @@ void checkIn(char userDetails[12][24]) {
     do {
         printf("Enter the number of guests (max 4):");
         fflush(stdin);
-        scanf("%d", &guests);
-        if (guests < 1 || guests > 4) {
+        number = scanf("%d%c", &guests,&term);
+        if ((number != 2 || term != '\n') || (guests < 1 || guests>4)) {
             printf("Invalid number of guests. Please enter between 1 and 4.\n");
         }
-    } while (guests < 1 || guests > 4 || guests ==0);
+    } while ((number != 2 || term != '\n') || (guests < 1 || guests>4));
 
     do {
         printf("\nHow many adults will be staying with you?:");
         fflush(stdin);
-        scanf("%d", &adults);
-        if (adults < 0 || adults == 0) {
+        number2 = scanf("%d%c", &adults,&term2);
+        if ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1)) {
             printf("Invalid number of adults. Please enter between 0 and %d.\n", guests);
         }
-    } while (adults < 0 || adults == 0 );
+    } while ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1));
 
     kids = guests - adults;
 
@@ -147,9 +147,9 @@ void checkIn(char userDetails[12][24]) {
         printf("What room would you like to book (1-6):\n"
                "Room 1(100)\tRoom 2(100)\tRoom 3(85)\tRoom 4(75)\tRoom 5(75)\tRoom 6(50):");
         fflush(stdin);
-        scanf("%d", &room);
-        if (room < 1 || room > 6) {
-            printf("Invalid room number. Please select between 1 and 6.\n");
+        number3 = scanf("%d%c", &room,&term3);
+        if ((room < 1 || room > 6) || ( number3 != 2 || term3 != '\n')) {
+            printf("Invalid room number.\nPlease select between 1 and 6.\n");
             valid = 0;
         } else {
             valid = 1;
