@@ -421,7 +421,16 @@ int getbill() {
 
 
     printf("\nThank you for staying!\n");
+    for(int k = 0;k<3;k++) {
+        for(int j = 0; j<4 ; j++) {
+            if(strcmp(tables[k][j],who) == 0) {
+                strcpy(tables[k][j], "");
+            }
+        }
+    }
     return 0;
+
+
 }
 //quit program
 
