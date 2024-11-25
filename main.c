@@ -71,7 +71,7 @@ void checkIn(char userDetails[12][24]) {
         return;
     }
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
-    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid;
+    int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid,validDOB;
     srand(time(NULL));
     do {
         nameValid = 0;
@@ -99,19 +99,42 @@ void checkIn(char userDetails[12][24]) {
     while(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1);
     // Date of birth and age validation
     do {
+        validDOB =  1;
         printf("What is your \ndate of birth?Enter day,month,and year(dd/mm/yy):");
         fflush(stdin);
         scanf("%d/%d/%d", &day, &month, &year);
         int currentYear = 2024;
-        age = currentYear - (year < 24 ? 2000 + year : 1900 + year);
+        if(year == 0) {
+            age = currentYear - 2000;}
+
+        else if(year == 8 && month == 12) {
+            age = 10;
+        }
+        else if(year > 8 && year < 24) {
+            age = 10;
+        }
+        else if(year == 59 && month == 12) {
+            age = 64;
+        }
+        else {
+            age = currentYear - (year < 24 ? 2000 + year : 1900 + year);
+        }
         if (age < 16) {
             printf("You must be at least 16 years old to check in.\n");
         }
         if(day > 31 || day<0||month<0|| month>12) {
+            validDOB = 0;
             printf("please enter valid days/month/year.\n");
-
         }
-    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 || day ==0 || month ==0 || year ==0);
+        if(month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0) {
+            printf("please enter valid days/month/year.\n");
+        }
+        if( month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31) {
+            printf("please enter valid days/month/year.\n");
+        }
+
+
+    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 || day ==0 || month ==0 ||month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0||month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31);
 
     // Guest and children validation
     do {
