@@ -73,7 +73,7 @@ void checkIn(char userDetails[12][24]) {
         printf("we are full right now,sorry!\n");
         return;
     }
-    char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
+    char firstName[200], lastName[200], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
     int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid,validDOB;
     char specChars[20][1] = {'!', '£', '$', '%', '^', '*', '(', ')', '_', '+', '=', '-', '#', '~', '|', '/', '.', ',', '`', '¬'};
     srand(time(NULL));
@@ -109,10 +109,13 @@ void checkIn(char userDetails[12][24]) {
                 }
             }
         }
-        if(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1) {
+        if(strlen(firstName)>150 || strlen(lastName)> 150) {
+            nameValid = 1;
+        }
+        if(nameValid == 1) {
             printf("\ninvalid names entered. Do better.\n");
         }
-    }while(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1);
+    }while(nameValid == 1);
         // Date of birth and age validation
         do {
             validDOB =  1;
@@ -407,13 +410,13 @@ int getbill() {
 
     // Calculate room cost
     if (rooms == 1 || rooms == 2) {
-        Roomcost = rooms * 100 * days;
+        Roomcost = 100 * days;
     } else if (rooms == 3) {
-        Roomcost = rooms * 85 * days;
+        Roomcost = 85 * days;
     } else if (rooms == 4 || rooms == 5) {
-        Roomcost = rooms * 75 * days;
+        Roomcost = 75 * days;
     } else if (rooms == 6) {
-        Roomcost = rooms * 50 * days;
+        Roomcost =  50 * days;
     }
 
     // Discount for senior citizens
