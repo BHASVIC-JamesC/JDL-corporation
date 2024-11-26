@@ -1,3 +1,3 @@
-C:/Users/james/Downloads/comp sci work/JDL-corporation/cmake-build-debug/CMakeFiles/JDL_corporation.dir
-C:/Users/james/Downloads/comp sci work/JDL-corporation/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/james/Downloads/comp sci work/JDL-corporation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/james.cook24/Downloads/JDL-corporation/cmake-build-debug/CMakeFiles/JDL_corporation.dir
+C:/Users/james.cook24/Downloads/JDL-corporation/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/james.cook24/Downloads/JDL-corporation/cmake-build-debug/CMakeFiles/rebuild_cache.dir

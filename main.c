@@ -424,22 +424,22 @@ int getbill() {
     // Calculate board cost for kids
     if (kids >= 1) {
         if (strcmp(data[person][5], "FB") == 0) {
-            childboard = kids * 20;
+            childboard = kids * 20 * days;
         } else if (strcmp(data[person][5], "HB") == 0) {
-            childboard = kids * 15;
+            childboard = kids * 15 * days;
         } else if (strcmp(data[person][5], "BB") == 0) {
-            childboard = kids * 5;
+            childboard = kids * 5 * days;
         }
         childboard /= 2;  // Half-price for kids under 16
     }
 
     // Calculate board cost for adults
     if (strcmp(data[person][5], "FB") == 0) {
-        adultboard = adults * 20;
+        adultboard = adults * 20*days;
     } else if (strcmp(data[person][5], "HB") == 0) {
-        adultboard = adults * 15;
+        adultboard = adults * 15 * days;
     } else if (strcmp(data[person][5], "BB") == 0) {
-        adultboard = adults * 5;
+        adultboard = adults * 5 * days;
     }
 
     // Calculate total board cost
