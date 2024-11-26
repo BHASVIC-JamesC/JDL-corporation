@@ -99,6 +99,13 @@ void checkIn(char userDetails[12][24]) {
                 }
             }
         }
+        for (int i = 0; i<strlen(lastName);  i++) {
+            for(int x=0; x<21; x++) {
+                if(lastName[i]==specChars[x][0])  {
+                    nameValid = 1;
+                }
+            }
+        }
         if(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1) {
             printf("\ninvalid names entered. Do better.\n");
         }
