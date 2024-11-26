@@ -1,3 +1,6 @@
+//
+// Created by leo.fidler24 on 26/11/2024.
+//
 #include <ctype.h>
 #include <stdio.h>
 #include <time.h>
@@ -72,6 +75,7 @@ void checkIn(char userDetails[12][24]) {
     }
     char firstName[20], lastName[20], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
     int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid,validDOB;
+    char specChars[20][1] = {'!', '£', '$', '%', '^', '*', '(', ')', '_', '+', '=', '-', '#', '~', '|', '/', '.', ',', '`', '¬'};
     srand(time(NULL));
     do {
         nameValid = 0;
@@ -91,152 +95,164 @@ void checkIn(char userDetails[12][24]) {
                 nameValid = 1;
             }
         }
-        if(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1) {
-            printf("\ninvalid names entered. Do better.\n");
-        }
-
-    }
-    while(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1);
-    // Date of birth and age validation
-    do {
-        validDOB =  1;
-        printf("What is your \ndate of birth?Enter day,month,and year(dd/mm/yy):");
-        fflush(stdin);
-        scanf("%d/%d/%d", &day, &month, &year);
-        int currentYear = 2024;
-        if(year == 0) {
-            age = currentYear - 2000;}
-
-        else if(year == 8 && month == 12) {
-            age = 10;
-        }
-        else if(year > 8 && year < 24) {
-            age = 10;
-        }
-        else if(year == 59 && month == 12) {
-            age = 64;
-        }
-        else {
-            age = currentYear - (year < 24 ? 2000 + year : 1900 + year);
-        }
-        if (age < 16) {
-            printf("You must be at least 16 years old to check in.\n");
-        }
-        if(day > 31 || day<0||month<0|| month>12) {
-            validDOB = 0;
-            printf("please enter valid days/month/year.\n");
-        }
-        if(month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0) {
-            printf("please enter valid days/month/year.\n");
-        }
-        if( month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31) {
-            printf("please enter valid days/month/year.\n");
-        }
-
-
-    } while (age < 16 || day > 31 || month > 12|| day<0||month<0 || day ==0 || month ==0 ||month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0||month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31);
-
-    // Guest and children validation
-    do {
-        printf("Enter the number of guests (max 4):");
-        fflush(stdin);
-        number = scanf("%d%c", &guests,&term);
-        if ((number != 2 || term != '\n') || (guests < 1 || guests>4)) {
-            printf("Invalid number of guests. Please enter between 1 and 4.\n");
-        }
-    } while ((number != 2 || term != '\n') || (guests < 1 || guests>4));
-
-    do {
-        printf("\nHow many adults will be staying with you?:");
-        fflush(stdin);
-        number2 = scanf("%d%c", &adults,&term2);
-        if ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1)) {
-            printf("Invalid number of adults. Please enter between 0 and %d.\n", guests);
-        }
-    } while ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1));
-
-    kids = guests - adults;
-
-    // Board type selection
-    do {
-        printf("\nWhat board type do you want to book?\nFull Board(FB)\tHalf Board(HB)\tBed and Breakfast(BB):");
-        fflush(stdin);
-        scanf("%s", board);
-        if (strcmp(board, "FB") != 0 && strcmp(board, "HB") != 0 && strcmp(board, "BB") != 0) {
-            printf("Invalid board type. Please try again.\n");
-        }
-    } while (strcmp(board, "FB") != 0 && strcmp(board, "HB") != 0 && strcmp(board, "BB") != 0);
-
-    // Stay duration
-    do {
-        printf("\nHow many days will you be staying with us?:");
-        fflush(stdin);
-        scanf("%d", &days);
-        if (days <= 0) {
-            printf("Invalid number of days. Please enter a positive number.\n");
-        }
-    } while (days <= 0);
-
-    // Newspaper preference
-    do {
-        printf("\nDo you want a daily newspaper? (Y/N): ");
-        fflush(stdin);
-        scanf(" %c", newspaper);
-        if (newspaper[0] != 'Y' && newspaper[0] != 'N') {
-            printf("Invalid option. Please enter Y or N.\n");
-        }
-    } while (newspaper[0] != 'Y' && newspaper[0] != 'N');
-
-    // Room selection
-    do {
-        printf("What room would you like to book (1-6):\n"
-               "Room 1(100)\tRoom 2(100)\tRoom 3(85)\tRoom 4(75)\tRoom 5(75)\tRoom 6(50):");
-        fflush(stdin);
-        number3 = scanf("%d%c", &room,&term3);
-        if ((room < 1 || room > 6) || ( number3 != 2 || term3 != '\n')) {
-            printf("Invalid room number.\nPlease select between 1 and 6.\n");
-            valid = 0;
-        } else {
-            valid = 1;
-            for (int i = 0; i < 7; i++) {
-                if (data[i][8][0] != '\0' && atoi(data[i][8]) == room) {
-                    printf("Sorry, that room is unavailable.\nPlease pick another.\n");
-                    valid = 0;
-                    break;
+        for (int i = 0; i<strlen(firstName);  i++) {
+            for(int x=0; x<21; x++) {
+                if(firstName[i]==specChars[x][0])  {
+                    nameValid = 1;
                 }
             }
         }
-    } while (!valid);
-
-    // Generate booking ID
-    random = 1000 + rand() % 9000;
-    snprintf(temp, sizeof(temp), "%d", random);
-    snprintf(bookingID, sizeof(bookingID), "%s%d", lastName, random);
-    printf("Booking ID:%s\n", bookingID);
-    // Save to `data` and `userDetails`
-
-    for(int k = 0; k<=6;k++) {
-        if(data[k][8][0] ==0){
-            guest = k;
-            break;
+        for (int i = 0; i<strlen(lastName);  i++) {
+            for(int x=0; x<21; x++) {
+                if(lastName[i]==specChars[x][0])  {
+                    nameValid = 1;
+                }
+            }
         }
+        if(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1) {
+            printf("\ninvalid names entered. Do better.\n");
+        }
+    }while(strlen(firstName)>150 || strlen(lastName)> 150 || nameValid == 1);
+        // Date of birth and age validation
+        do {
+            validDOB =  1;
+            printf("What is your \ndate of birth?Enter day,month,and year(dd/mm/yy):");
+            fflush(stdin);
+            scanf("%d/%d/%d", &day, &month, &year);
+            int currentYear = 2024;
+            if(year == 0) {
+                age = currentYear - 2000;}
+
+            else if(year == 8 && month == 12) {
+                age = 10;
+            }
+            else if(year > 8 && year < 24) {
+                age = 10;
+            }
+            else if(year == 59 && month == 12) {
+                age = 64;
+            }
+            else {
+                age = currentYear - (year < 24 ? 2000 + year : 1900 + year);
+            }
+            if (age < 16) {
+                printf("You must be at least 16 years old to check in.\n");
+            }
+            if(day > 31 || day<0||month<0|| month>12) {
+                validDOB = 0;
+                printf("please enter valid days/month/year.\n");
+            }
+            if(month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0) {
+                printf("please enter valid days/month/year.\n");
+            }
+            if( month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31) {
+                printf("please enter valid days/month/year.\n");
+            }
+
+
+        } while (age < 16 || day > 31 || month > 12|| day<0||month<0 || day ==0 || month ==0 ||month == 2 && day > 29 && year%4 == 0 || month == 2 && day > 28 && year%4 != 0||month == 4 && day == 31 || month == 6 && day == 31 || month == 9 && day == 31|| month == 11 && day == 31);
+
+        // Guest and children validation
+        do {
+            printf("Enter the number of guests (max 4):");
+            fflush(stdin);
+            number = scanf("%d%c", &guests,&term);
+            if ((number != 2 || term != '\n') || (guests < 1 || guests>4)) {
+                printf("Invalid number of guests. Please enter between 1 and 4.\n");
+            }
+        } while ((number != 2 || term != '\n') || (guests < 1 || guests>4));
+
+        do {
+            printf("\nHow many adults will be staying with you?:");
+            fflush(stdin);
+            number2 = scanf("%d%c", &adults,&term2);
+            if ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1)) {
+                printf("Invalid number of adults. Please enter between 0 and %d.\n", guests);
+            }
+        } while ((number2 != 2 || term2 != '\n') || (adults > guests || adults<1));
+
+        kids = guests - adults;
+
+        // Board type selection
+        do {
+            printf("\nWhat board type do you want to book?\nFull Board(FB)\tHalf Board(HB)\tBed and Breakfast(BB):");
+            fflush(stdin);
+            scanf("%s", board);
+            if (strcmp(board, "FB") != 0 && strcmp(board, "HB") != 0 && strcmp(board, "BB") != 0) {
+                printf("Invalid board type. Please try again.\n");
+            }
+        } while (strcmp(board, "FB") != 0 && strcmp(board, "HB") != 0 && strcmp(board, "BB") != 0);
+
+        // Stay duration
+        do {
+            printf("\nHow many days will you be staying with us?:");
+            fflush(stdin);
+            scanf("%d", &days);
+            if (days <= 0) {
+                printf("Invalid number of days. Please enter a positive number.\n");
+            }
+        } while (days <= 0);
+
+        // Newspaper preference
+        do {
+            printf("\nDo you want a daily newspaper? (Y/N): ");
+            fflush(stdin);
+            scanf(" %c", newspaper);
+            if (newspaper[0] != 'Y' && newspaper[0] != 'N') {
+                printf("Invalid option. Please enter Y or N.\n");
+            }
+        } while (newspaper[0] != 'Y' && newspaper[0] != 'N');
+
+        // Room selection
+        do {
+            printf("What room would you like to book (1-6):\n"
+                   "Room 1(100)\tRoom 2(100)\tRoom 3(85)\tRoom 4(75)\tRoom 5(75)\tRoom 6(50):");
+            fflush(stdin);
+            number3 = scanf("%d%c", &room,&term3);
+            if ((room < 1 || room > 6) || ( number3 != 2 || term3 != '\n')) {
+                printf("Invalid room number.\nPlease select between 1 and 6.\n");
+                valid = 0;
+            } else {
+                valid = 1;
+                for (int i = 0; i < 7; i++) {
+                    if (data[i][8][0] != '\0' && atoi(data[i][8]) == room) {
+                        printf("Sorry, that room is unavailable.\nPlease pick another.\n");
+                        valid = 0;
+                        break;
+                    }
+                }
+            }
+        } while (!valid);
+
+        // Generate booking ID
+        random = 1000 + rand() % 9000;
+        snprintf(temp, sizeof(temp), "%d", random);
+        snprintf(bookingID, sizeof(bookingID), "%s%d", lastName, random);
+        printf("Booking ID:%s\n", bookingID);
+        // Save to `data` and `userDetails`
+
+        for(int k = 0; k<=6;k++) {
+            if(data[k][8][0] ==0){
+                guest = k;
+                break;
+            }
+        }
+
+        snprintf(data[guest][0], 24, "%s", firstName);
+        snprintf(data[guest][1], 24, "%s", lastName);
+        snprintf(data[guest][2], 24, "%d", age);
+        snprintf(data[guest][3], 24, "%d", kids);
+        snprintf(data[guest][4], 24, "%d", adults);
+        snprintf(data[guest][5], 24, "%s", board);
+        snprintf(data[guest][6], 24, "%d", days);
+        data[guest][7][0] = newspaper[0];
+        snprintf(data[guest][8], 24, "%d", room);
+        snprintf(data[guest][9], 24, "%s", bookingID);
+
+
+
+        printf("Check-in complete!\n");
     }
-
-    snprintf(data[guest][0], 24, "%s", firstName);
-    snprintf(data[guest][1], 24, "%s", lastName);
-    snprintf(data[guest][2], 24, "%d", age);
-    snprintf(data[guest][3], 24, "%d", kids);
-    snprintf(data[guest][4], 24, "%d", adults);
-    snprintf(data[guest][5], 24, "%s", board);
-    snprintf(data[guest][6], 24, "%d", days);
-    data[guest][7][0] = newspaper[0];
-    snprintf(data[guest][8], 24, "%d", room);
-    snprintf(data[guest][9], 24, "%s", bookingID);
-
-
-
-    printf("Check-in complete!\n");
-}
 
 
 //dinner stuff now
@@ -262,7 +278,7 @@ void dinner(char userDetails[12][24]) {
 }
 
 
-int eligible(char bookingIDdinner[20]) {
+int eligible(char bookingIDdinner[20]){
 
 
     for (int i = 0; i < 7; i++) {
@@ -462,7 +478,3 @@ void quitProgram(char userDetails[12][24]) {
         memset(userDetails[i], 0, 24); // Clear each row of the 2D array
     }
 }
-
-
-
-
