@@ -73,7 +73,7 @@ void checkIn(char userDetails[12][24]) {
         printf("we are full right now,sorry!\n");
         return;
     }
-    char firstName[200], lastName[200], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3;
+    char firstName[200], lastName[200], board[4], newspaper[2], bookingID[24], temp[20],term,term2,term3,confirm;
     int day, month, year, age,kids,guests, adults, days, room, valid = 0, random,dayinteger,monthinteger,yearinteger,number,number2,number3,nameValid,validDOB;
     char specChars[20][1] = {'!', '£', '$', '%', '^', '*', '(', ')', '_', '+', '=', '-', '#', '~', '|', '/', '.', ',', '`', '¬'};
     srand(time(NULL));
@@ -227,6 +227,16 @@ void checkIn(char userDetails[12][24]) {
             }
         } while (!valid);
 
+        printf("\ndo you wish to confirm your check in?(Y or N):");
+        fflush(stdin);
+        scanf("%c",&confirm);
+
+
+        if(confirm == 'N') {
+            return;
+        }
+
+
         // Generate booking ID
         random = 1000 + rand() % 9000;
         snprintf(temp, sizeof(temp), "%d", random);
@@ -300,7 +310,7 @@ int eligible(char bookingIDdinner[20]){
 
 
 void findTable(char bookingIDdinner[20], char userDetails[12][24]) {
-    char tableChoice[10];
+    char tableChoice[10],confirm;
     int available = 0;
 
     // Display available tables
@@ -332,6 +342,14 @@ void findTable(char bookingIDdinner[20], char userDetails[12][24]) {
     if (!available) {
         printf("\nNo tables available right now.\n");
         quitProgram(userDetails);
+        return;
+    }
+    printf("\ndo you wish to continue booking a table?(Y or N):");
+    fflush(stdin);
+    scanf("%c",&confirm);
+
+
+    if(confirm == 'N') {
         return;
     }
 
